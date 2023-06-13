@@ -11,10 +11,18 @@
 
     var computerChoice = choices[Math.floor(Math.random() * 3)]
 
-    console.log(computerChoice)
+    console.log("Human:" + humanChoice)
+    console.log("Computer:" + computerChoice)
 
-// players choose R, P, S
-  // computer randomly chooses
+    if (humanChoice === "S" && computerChoice === "P" ||
+        humanChoice === "R" && computerChoice === "S" ||
+        humanChoice === "P" && computerChoice === "R"){
+        alert("YOU WIN! WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+    } else if (humanChoice === computerChoice) {
+        alert("You tied. Better than losing, I guess")
+    } else {
+        alert("You lose. Better luck next time!")
+    }
 
 // compare choices
   // if humanChoice is S and computerChoice is P OR
