@@ -1,10 +1,14 @@
 
 
-    var wins = 0, 
-        losses = 0, 
-        ties = 0
+var wins = 0, 
+    losses = 0, 
+    ties = 0
 
-    var choices = ["R", "P", "S"]
+var choices = ["R", "P", "S"]
+
+var playAgain = true
+
+while (playAgain){
 
     var humanChoice = prompt("Choose R, P, or S")
     console.log(humanChoice)
@@ -18,29 +22,21 @@
         humanChoice === "R" && computerChoice === "S" ||
         humanChoice === "P" && computerChoice === "R"){
         alert("YOU WIN! WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+        wins++
     } else if (humanChoice === computerChoice) {
         alert("You tied. Better than losing, I guess")
+        ties++
     } else {
         alert("You lose. Better luck next time!")
+        losses++
     }
 
-// compare choices
-  // if humanChoice is S and computerChoice is P OR
-  // if humanChoice is R and computerChoice is S OR
-  // if humanChoice is P and computerChoice is R
-    // alert that we won
-    // increase wins
-  // if humanChoice === computerChoice
-    // alert that we tied
-    // increase ties 
-  // else
-    // alert that lost
-    // increase losses
+    alert("Wins: " + wins + "\nTies: " + ties + "\nLosses: " + losses)
 
-// ask user "do you want to play again?"
-  // if yes
-    // restart game
-  // if no
-    // exit game
+    playAgain = confirm("Play again?")
+}
+
+alert("Play again soon!")
+
 
 
